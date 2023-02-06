@@ -25,10 +25,11 @@
         "bracketSpacing": true
       }
     ],
-    "no-console": 1,
+    "no-console": "warn",
     "@typescript-eslint/no-explicit-any": "off",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "off",
-    "prefer-const":"off"
+    "prefer-const": "off",
+    "no-async-promise-executor": "off"
   }
 }

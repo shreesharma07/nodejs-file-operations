@@ -68,3 +68,17 @@ export const verifyJWT = (params: jwtParams) => {
 		return true;
 	});
 };
+
+// % // Function to Create Smaller Chunks of Array //
+export const createSmallerChunks = async (arrs: Array<any>, size: number): Promise<any[]> => {
+	// ! // Return Promise as Response //
+	return new Promise(async (resolve, reject) => {
+		try {
+			const smallrChunks = _.chunk(arrs, size);
+			resolve(smallrChunks);
+		} catch (error: any) {
+			Logger.error(error?.message);
+			resolve([]);
+		}
+	});
+};

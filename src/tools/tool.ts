@@ -16,6 +16,8 @@ export const getFiles = async (params: fileParams) => {
 		if (includeExt) {
 			extractParams['withFileTypes'] = includeExt;
 		}
+
+		// ! // Check Valid File Path //
 		if (filePath !== '' && fs.existsSync(filePath)) {
 			// ! // Return Promise as Response //
 			return new Promise((resolve, reject) => {
