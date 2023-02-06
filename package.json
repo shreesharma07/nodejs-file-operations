@@ -8,7 +8,7 @@
     "start": "npm run build && node build/index.js",
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\" && prettier --write \"types/**/*.{ts, tsx}\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "prepare": "husky install"
   },
   "keywords": [],
