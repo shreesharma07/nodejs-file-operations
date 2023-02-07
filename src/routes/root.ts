@@ -76,8 +76,6 @@ router.post('/moveFiles', async (req: Request, res: Response) => {
 
 			// ! // Check Folder Exists //
 			if (fs.existsSync(folderPath)) {
-
-
 				// * // Get Files Name //
 				let { totalFiles = 1, files }: any = await getDirectoryContents({ filePath: folderPath, includeExt: false, getList: true });
 
@@ -89,10 +87,8 @@ router.post('/moveFiles', async (req: Request, res: Response) => {
 
 				// ! // Check Length //
 				if (fileChunks.length > 0) {
-
 					// @ // Iterate loop on chunks //
 					let returnResponse: any = fileChunks.map((el: any, index: number) => {
-
 						// * // Folder Name //
 						let folderName: any = `${folderPrexfix}${index}`;
 						let completePath: any = path.join(folderPath, folderName);
@@ -126,13 +122,10 @@ router.post('/moveFiles', async (req: Request, res: Response) => {
 							path: completePath,
 							files: fileChunks[index]
 						};
-
-
 					});
 
 					// * // Return Response //
 					return res.send({ returnResponse });
-
 				} else {
 					throw new Error('Error Creating Batches with Required Parameters');
 				}
