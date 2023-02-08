@@ -11,12 +11,6 @@ import { MORGAN_LOGGER, PORT, HOST } from './config/index';
 // * // Import Root Route //
 import rootRouter from './routes/root';
 
-// import UserRoutes from './routes/User';
-// import S3Routes from './routes/s3';
-// import EncDec from './routes/enc_dec';
-// import ImageUpload from './routes/aws-s3';
-// import CustomRateLimit from './config/rate-limit';
-
 // * // Config Env. Values //
 dotenv.config();
 
