@@ -27,5 +27,5 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', rootRouter);
 
 app.listen(PORT, () => {
-	Logger.debug(`⚡️[server]: Server is running at ${HOST}:${PORT}`);
+	Logger.debug(`[⚡]: Server is running at ${HOST}:${PORT}`);
 });
